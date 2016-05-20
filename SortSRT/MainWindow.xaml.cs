@@ -18,7 +18,6 @@ namespace SortSRT
             //ReadASS ra = new ReadASS();
             //ra.readSubtitles(@"F:\download\BaiduYunDownload\Everest.2015.720p.BluRay.x264-SPARKS.ass");
             //ReadSubtitles rs = ra.convertTo(SubtitlesType.Type_SRT);
-            //rs.deleteLineFormat();
             //rs.writeSubtitles(@"F:\download\BaiduYunDownload\Everest.2015.720p.BluRay.x264-SPARKS.srt");
             //convertFiles(@"D:\jicemoon\Desktop\[]", @"D:\jicemoon\Desktop\[]\[]", SubtitlesType.Type_SRT,true,true);
             convertFiles(@"G:\[电视剧]\[疑犯追踪][S04][720p][BluRay][DEMAND]\[ass]", @"G:\[电视剧]\[疑犯追踪][S04][720p][BluRay][DEMAND]", SubtitlesType.Type_SRT, true, false);
