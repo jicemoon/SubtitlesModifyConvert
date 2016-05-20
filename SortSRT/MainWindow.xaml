@@ -1,0 +1,23 @@
+﻿<Window x:Class="SortSRT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="125*"/>
+            <ColumnDefinition Width="392*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <ListBox x:Name="fileListBox" HorizontalAlignment="Stretch" Grid.ColumnSpan="2"  Margin="0" VerticalAlignment="Stretch">
+
+        </ListBox>
+        <ComboBox x:Name="operation" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Width="120" SelectionChanged="operation_SelectionChanged">
+            <ComboBoxItem Content="格式转化"></ComboBoxItem>
+            <ComboBoxItem Content="合并字幕"></ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</Window>
