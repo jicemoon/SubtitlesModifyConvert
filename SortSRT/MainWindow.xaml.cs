@@ -20,7 +20,12 @@ namespace SortSRT
             //ReadSubtitles rs = ra.convertTo(SubtitlesType.Type_SRT);
             //rs.writeSubtitles(@"F:\download\BaiduYunDownload\Everest.2015.720p.BluRay.x264-SPARKS.srt");
             //convertFiles(@"D:\jicemoon\Desktop\[]", @"D:\jicemoon\Desktop\[]\[]", SubtitlesType.Type_SRT,true,true);
-            convertFiles(@"G:\[电视剧]\[疑犯追踪][S04][720p][BluRay][DEMAND]\[ass]", @"G:\[电视剧]\[疑犯追踪][S04][720p][BluRay][DEMAND]", SubtitlesType.Type_SRT, true, false);
+            //convertFiles(@"G:\[电视剧]\[欧美][权力的游戏][S01-S5][Bluray]\[]", @"G:\[电视剧]\[欧美][权力的游戏][S01-S5][Bluray]", SubtitlesType.Type_SRT, true, false);
+            ReadSRT rs = new ReadSRT();
+            rs.readSubtitles(@"G:\[电视剧]\[欧美][犯罪现场调查][csi]\CSI.S01E22.720p.BluRay.x264-SiNNERS.srt");
+            rs.translateTime(500);
+            rs.writeSubtitles();
+            
         }
         private void convertFiles(string inFolder, string outFolder, uint targetType = SubtitlesType.Type_SRT, bool lineFormat = false, bool all = false)
         {
@@ -34,7 +39,7 @@ namespace SortSRT
                 {
                     rs.deleteLineFormat(all);
                 }
-                rs.resortSrt(true);
+                //rs.resortSrt(true);
                 rs.writeSubtitles(outFolder + @"\" + Path.GetFileNameWithoutExtension(files[i]) + end);
                 //break;
             }
